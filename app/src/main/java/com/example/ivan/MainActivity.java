@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             timepo += intervalo;*/
 
            totalNombre += "\n"+ item;
+           String hola =  "hols";
         }
 
         textViewListaDeUsuarios.setText(totalNombre);
