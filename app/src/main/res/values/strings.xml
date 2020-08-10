@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Ivan</string>
-    <string name="mostrar">Mostrar</string>
+    <string name="mostrar">Agregar a la Lista</string>
     <string name="edit"/>
+    <string name="foto"/>
     <string name="ingresa_un_nombre">Ingresa Un Nombre</string>
     <string name="agregar">Agregar</string>
+    <string name="retirar_de_la_lita">retirar de la lita</string>
 </resources>

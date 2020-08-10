@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,7 +24,7 @@
     <Button
         android:onClick="mostrar"
         android:id="@+id/boton_Mostrar_Nombres"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,36 +36,81 @@
         android:background="@drawable/fondo_boton"
         android:textColor="#000000"/>
 
+    <Button
+        android:visibility="gone"
+        android:onClick="retirar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/retirar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/fondo_boton"
+        android:text="@string/retirar_de_la_lita"
+        app:layout_constraintVertical_bias="0.950"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.850"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@drawable/fondo_edittext"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:hint="@string/ingresa_un_nombre"
+        android:textColorHint="#000000"
+        tools:ignore="Autofill,TextFields" />
+
+
     <EditText
         android:background="@drawable/fondo_edittext"
         android:hint="@string/ingresa_un_nombre"
         android:textColor="#FFFFFF"
         android:textColorHint="#000000"
         android:id="@+id/editText"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.800"
-        app:layout_constraintHorizontal_bias="0.100"
+        app:layout_constraintVertical_bias="0.850"
+        app:layout_constraintHorizontal_bias="0.5"
         tools:ignore="Autofill,TextFields" />
-
-    <Button
-        android:onClick="agregar"
-        android:textSize="10sp"
-        android:text="@string/agregar"
-        android:id="@+id/boton_agregar"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+    
+    <ImageView
+        android:background="@drawable/flecha_dos"
+        android:contentDescription="@string/foto"
+        android:id="@+id/imagen_quitar"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.790"
-        app:layout_constraintHorizontal_bias="0.900"
-        android:background="@drawable/fondo_boton"
-        tools:ignore="SmallSp" />
+        app:layout_constraintVertical_bias="0.750"
+        app:layout_constraintHorizontal_bias="0.940" />
+
+    <ImageView
+        android:background="@drawable/flecha"
+        android:contentDescription="@string/foto"
+        android:visibility="gone"
+        android:id="@+id/imagen_agregar"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.750"
+        app:layout_constraintHorizontal_bias="0.940" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
