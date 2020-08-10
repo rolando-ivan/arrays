@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Ivan</string>
     <string name="mostrar">Mostrar</string>
+    <string name="edit"/>
+    <string name="ingresa_un_nombre">Ingresa Un Nombre</string>
+    <string name="agregar">Agregar</string>
 </resources>

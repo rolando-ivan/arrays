@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText edit_text_nombres_para_lista;
     private TextView textViewListaDeUsuarios;
     private ArrayList<String> listaDeNombres;
     //private int index =0 ;
@@ -39,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         String totalNombre="";
 
         for (String item : listaDeNombres){
-
-           /* new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+/* new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     textViewListaDeUsuarios.setText(listaDeNombres.get(index));
@@ -48,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, timepo);
 
-            timepo += intervalo;*/
-
-           totalNombre += "\n" + item;
+            timepo += intervalo;*/      totalNombre += "\n" + item;
         }
 
         textViewListaDeUsuarios.setText(totalNombre);
