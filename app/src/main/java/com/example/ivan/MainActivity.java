@@ -3,8 +3,6 @@ package com.example.ivan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textViewListaDeUsuarios;
     private ArrayList<String> listaDeNombres;
-    private int index =0 ;
+    //private int index =0 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,20 +23,18 @@ public class MainActivity extends AppCompatActivity {
 
         String nombre1 = "Juan";
 
-        listaDeNombres = new ArrayList<String>();
+        listaDeNombres = new ArrayList<>();
         listaDeNombres.add(nombre1);
-        listaDeNombres.add("Juan");
         listaDeNombres.add("Pedro");
         listaDeNombres.add("Leiva");
         listaDeNombres.add("Rolando");
-        listaDeNombres.add("Rolando1");
         listaDeNombres.remove(nombre1);
-        listaDeNombres.remove("Juan");//No funciona porque la bariable la crea la computadora
+        //listaDeNombres.remove("Juan"); No funciona porque la bariable la crea la computadora
     }
 
     public void mostrar (View view){
-        final int intervalo = 1000;
-        int timepo = 0;
+        /*final int intervalo = 1000;
+        int timepo = 0;*/
 
         String totalNombre="";
 
@@ -54,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
             timepo += intervalo;*/
 
-           totalNombre += "\n"+ item;
-           String hola =  "hols";
+           totalNombre += "\n" + item;
         }
 
         textViewListaDeUsuarios.setText(totalNombre);
