@@ -4,16 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -43,12 +39,6 @@ public class MainActivity extends AppCompatActivity {
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edit_text_nombres_para_lista.equals("")){
-                    Dialog dialogo = new Dialog(MainActivity.this);
-                    dialogo.setCancelable(true);
-                    dialogo.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    dialogo.setContentView(R.layout.dialogo);
-                }else{
                 ObjectAnimator animacionXA = ObjectAnimator.ofFloat(agregar, "x", 735f);
                 ObjectAnimator animacionXQ = ObjectAnimator.ofFloat(quitar, "x", 630f);
                 ObjectAnimator animacionXB = ObjectAnimator.ofFloat(barra, "x", 710f);
@@ -67,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 animatorSet.playTogether(animacionXA, animacionXQ, animacionXB, animacionXBotonQuitar, animacionXEditTextQuitar,
                         animacionXEditTextAgregar, animacionXBotonAgregar);
                 animatorSet.start();
-                }
             }
         });
         quitar = findViewById(R.id.imagen_quitar);
@@ -101,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
         /*listaDeNombres.add(nombre1);
         listaDeNombres.add("Pedro");
         listaDeNombres.add("Leiva");
-        listaDeNombres.add("Rolando");*/
-        /*listaDeNombres.remove(nombre1);
+        listaDeNombres.add("Rolando");
+        listaDeNombres.remove(nombre1);
         //listaDeNombres.remove("Juan"); No funciona porque la bariable la crea la computadora*/
     }
 
@@ -113,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         listaDeNombres.add(nombre2);
         edit_text_nombres_para_lista.setText("");
 
-        String totalNombre = "" ;
+        StringBuilder totalNombre = new StringBuilder();
 
         for (String item : listaDeNombres){
 /* new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
@@ -124,20 +113,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, timepo);
 
-            timepo += intervalo;*/      totalNombre += "\n" + item;
+            timepo += intervalo;*/      totalNombre.append("\n").append(item);
         }
-        textViewListaDeUsuarios.setText(totalNombre);
+        textViewListaDeUsuarios.setText(totalNombre.toString());
     }
     public void retirar(View view){
         String nombre = edit_text_retirar_nombre_lista.getText().toString();
         listaDeNombres.remove(nombre);
         edit_text_retirar_nombre_lista.setText("");
 
-        String totalNombre = "" ;
+        StringBuilder totalNombre = new StringBuilder();
 
         for (String item : listaDeNombres){
-            totalNombre += "\n" + item;
+            totalNombre.append("\n").append(item);
         }
-        textViewListaDeUsuarios.setText(totalNombre);
+        textViewListaDeUsuarios.setText(totalNombre.toString());
     }
 }
