@@ -1,6 +1,7 @@
 package com.example.ivan;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -35,11 +36,12 @@ public class MainActivity extends AppCompatActivity {
         edit_text_nombres_para_lista = findViewById(R.id.editTextAgregar);
         edit_text_retirar_nombre_lista = findViewById(R.id.editTextRetirar);
         barra =findViewById(R.id.barra);
+        final ConstraintLayout contenedor = findViewById(R.id.contenedor);
         agregar = findViewById(R.id.imagen_agregar);
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ObjectAnimator animacionXA = ObjectAnimator.ofFloat(agregar, "x", 735f);
+                /*ObjectAnimator animacionXA = ObjectAnimator.ofFloat(agregar, "x", 735f);
                 ObjectAnimator animacionXQ = ObjectAnimator.ofFloat(quitar, "x", 630f);
                 ObjectAnimator animacionXB = ObjectAnimator.ofFloat(barra, "x", 710f);
                 ObjectAnimator animacionXEditTextQuitar = ObjectAnimator.ofFloat(edit_text_retirar_nombre_lista, "x", 800f);
@@ -56,14 +58,15 @@ public class MainActivity extends AppCompatActivity {
                 AnimatorSet animatorSet = new AnimatorSet();
                 animatorSet.playTogether(animacionXA, animacionXQ, animacionXB, animacionXBotonQuitar, animacionXEditTextQuitar,
                         animacionXEditTextAgregar, animacionXBotonAgregar);
-                animatorSet.start();
+                animatorSet.start();*/
+
             }
         });
         quitar = findViewById(R.id.imagen_quitar);
         quitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ObjectAnimator animacionXQ = ObjectAnimator.ofFloat(quitar, "x", -80f);
+                /*ObjectAnimator animacionXQ = ObjectAnimator.ofFloat(quitar, "x", -80f);
                 ObjectAnimator animacionXA = ObjectAnimator.ofFloat(agregar, "x", 20f);
                 ObjectAnimator animacionXB = ObjectAnimator.ofFloat(barra, "x", 0f);
                 ObjectAnimator animacionXEditTextQuitar = ObjectAnimator.ofFloat(edit_text_retirar_nombre_lista, "x", 100f);
@@ -80,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
                 AnimatorSet animatorSet = new AnimatorSet();
                 animatorSet.playTogether(animacionXQ, animacionXA, animacionXB, animacionXBotonQuitar, animacionXEditTextQuitar,
                         animacionXEditTextAgregar, animacionXBotonAgregar);
+                animatorSet.start();*/
+                ObjectAnimator animacionX = ObjectAnimator.ofFloat(contenedor, "x", -710f);
+                animacionX.setDuration(2000);
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(animacionX);
                 animatorSet.start();
             }
         });
