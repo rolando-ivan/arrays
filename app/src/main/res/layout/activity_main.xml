@@ -8,63 +8,106 @@
     tools:context=".MainActivity"
     android:background="#818181">
 
-    <TextView
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:background="@drawable/fondo_lista_text_view"
-        android:id="@+id/textView"
+    <LinearLayout
+        android:id="@+id/titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lista_de_nombres"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:background="@drawable/fondo_lista_text_view"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lista_de_eleccion"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:background="@drawable/fondo_lista_text_view"
+            android:gravity="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:contentDescription="@string/foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:background="@drawable/fondo_lista_text_view"
+            android:id="@+id/textView"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_gravity="top"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:background="@drawable/fondo_lista_text_view"
+            android:id="@+id/textView1"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
     <Button
         android:onClick="mostrar"
-        android:id="@+id/boton_Mostrar_Nombres"
+        android:id="@+id/agregar_lista"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.950"
+        app:layout_constraintVertical_bias="0.970"
         app:layout_constraintHorizontal_bias="0.5"
         android:text="@string/mostrar"
         android:background="@drawable/fondo_boton"
         android:textColor="#000000"/>
 
     <Button
-        android:visibility="gone"
         android:onClick="retirar"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:id="@+id/retirar"
+        android:id="@+id/retirar_lista"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@drawable/fondo_boton"
         android:text="@string/retirar_de_la_lita"
-        app:layout_constraintVertical_bias="0.950"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.970"
+        app:layout_constraintHorizontal_bias="2"
         android:textColor="#000000"/>
 
     <EditText
+        android:id="@+id/editTextRetirar"
         android:layout_width="350dp"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.850"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.890"
+        app:layout_constraintHorizontal_bias="4"
         android:background="@drawable/fondo_edittext"
-        android:visibility="gone"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
         android:hint="@string/ingresa_un_nombre"
         android:textColorHint="#000000"
         tools:ignore="Autofill,TextFields" />
@@ -75,42 +118,64 @@
         android:hint="@string/ingresa_un_nombre"
         android:textColor="#FFFFFF"
         android:textColorHint="#000000"
-        android:id="@+id/editText"
+        android:id="@+id/editTextAgregar"
         android:layout_width="350dp"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.850"
+        app:layout_constraintVertical_bias="0.890"
         app:layout_constraintHorizontal_bias="0.5"
         tools:ignore="Autofill,TextFields" />
     
-    <ImageView
+    <Button
         android:background="@drawable/flecha_dos"
         android:contentDescription="@string/foto"
         android:id="@+id/imagen_quitar"
-        android:layout_width="45dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.750"
-        app:layout_constraintHorizontal_bias="0.940" />
+        app:layout_constraintVertical_bias="0.840"
+        app:layout_constraintHorizontal_bias="0.970" />
 
-    <ImageView
+    <Button
         android:background="@drawable/flecha"
         android:contentDescription="@string/foto"
-        android:visibility="gone"
         android:id="@+id/imagen_agregar"
-        android:layout_width="45dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.750"
-        app:layout_constraintHorizontal_bias="0.940" />
+        app:layout_constraintVertical_bias="0.840"
+        app:layout_constraintHorizontal_bias="1.130" />
+
+    <ImageView
+        android:id="@+id/barra"
+        android:contentDescription="@string/foto"
+        android:layout_width="10dp"
+        android:layout_height="205dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="1"
+        android:background="#000000" />
+
+    <ImageView
+        android:contentDescription="@string/foto"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/barra"
+        android:background="#000000"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
