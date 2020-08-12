@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Ivan</string>
-    <string name="mostrar">Agregar a la Lista</string>
+    <string name="mostrar">A/L</string>
     <string name="edit"/>
     <string name="foto"/>
     <string name="ingresa_un_nombre">Ingresa Un Nombre</string>
     <string name="agregar">Agregar</string>
-    <string name="retirar_de_la_lita">retirar de la lita</string>
+    <string name="retirar_de_la_lita">R/L</string>
     <string name="lista_de_nombres">Lista de Nombres</string>
     <string name="lista_de_eleccion">Lista de eleccion</string>
     <string name="prueva_de_animacion">Prueva de animacion</string>
