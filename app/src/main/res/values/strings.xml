@@ -10,4 +10,9 @@
     <string name="lista_de_eleccion">Lista de eleccion</string>
     <string name="prueva_de_animacion">Prueva de animacion</string>
     <string name="rolando">Rolando</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="lista_de_acciones">Lista de Acciones</string>
+    <string name="filtrar_nombres">Filtrar Nombres</string>
+    <string name="libre">Libre</string>
+    <string name="cerrar_dialogo">cerrar</string>
 </resources>

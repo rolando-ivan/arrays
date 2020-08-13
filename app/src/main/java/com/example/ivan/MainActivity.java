@@ -6,10 +6,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -64,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         imagen_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                new CuadroMenu(MainActivity.this);
             }
         });
     }

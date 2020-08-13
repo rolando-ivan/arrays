@@ -2,23 +2,34 @@
   <dictionary name="rolan">
     <words>
       <w>abrir</w>
+      <w>acciones</w>
       <w>agregar</w>
       <w>animacion</w>
+      <w>animacionx</w>
       <w>autofill</w>
       <w>bariable</w>
       <w>barra</w>
+      <w>cerrar</w>
       <w>computadora</w>
       <w>contenedor</w>
       <w>crea</w>
+      <w>cuadro</w>
+      <w>desplegable</w>
       <w>dialogo</w>
       <w>edittext</w>
       <w>eleccion</w>
+      <w>extencion</w>
+      <w>filtrar</w>
       <w>flecha</w>
       <w>fondo</w>
       <w>foto</w>
       <w>imagen</w>
       <w>ingresa</w>
       <w>intervalo</w>
+      <w>libre</w>
+      <w>logostop</w>
+      <w>mensaje</w>
+      <w>menudespegable</w>
       <w>modificada</w>
       <w>nombre</w>
       <w>porque</w>
