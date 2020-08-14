@@ -1,8 +1,6 @@
 package com.example.ivan;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
@@ -10,8 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Button;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         edit_text_nombres_para_lista = findViewById(R.id.editTextAgregar);
         edit_text_retirar_nombre_lista = findViewById(R.id.editTextRetirar);
 
-        final ConstraintLayout contenedor = findViewById(R.id.contenedor);
+        final RelativeLayout contenedor = findViewById(R.id.contenedor);
         final ImageView imagen_menu = findViewById(R.id.foto_menu);
 
         Button agregar = findViewById(R.id.imagen_agregar);

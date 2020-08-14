@@ -15,4 +15,6 @@
     <string name="filtrar_nombres">Filtrar Nombres</string>
     <string name="libre">Libre</string>
     <string name="cerrar_dialogo">cerrar</string>
+    <string name="tiene_que_ingresar">Tiene que ingresar</string>
+    <string name="un_nombre">Un Nombre</string>
 </resources>

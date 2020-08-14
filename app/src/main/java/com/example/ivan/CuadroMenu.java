@@ -1,7 +1,5 @@
 package com.example.ivan;
 
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -12,8 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
+import android.widget.RelativeLayout;
 
 public class CuadroMenu {
 
@@ -36,7 +33,7 @@ public class CuadroMenu {
                 dialogo.setContentView(R.layout.filtrar_nombres);
                 dialogo.show();
 
-                final ConstraintLayout fondo_dialogo = dialogo.findViewById(R.id.fondo_dialogo);
+                RelativeLayout fondo_dialogo = dialogo.findViewById(R.id.fondo_dialogo);
                 Animation animacion = AnimationUtils.loadAnimation(context, R.anim.animacion_menu);
                 fondo_dialogo.startAnimation(animacion);
 
@@ -52,7 +49,7 @@ public class CuadroMenu {
         final LinearLayout libre = dialogo.findViewById(R.id.libre);
 
 
-        final ConstraintLayout menudespegable = dialogo.findViewById(R.id.menu_desplegable);
+        final RelativeLayout menudespegable = dialogo.findViewById(R.id.menu_desplegable);
         Animation animacion = AnimationUtils.loadAnimation(context, R.anim.animacion_menu);
         menudespegable.startAnimation(animacion);
     }
