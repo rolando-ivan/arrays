@@ -1,11 +1,14 @@
 package com.example.ivan;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -34,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
 
         final RelativeLayout contenedor = findViewById(R.id.contenedor);
         final ImageView imagen_menu = findViewById(R.id.foto_menu);
+
+        final RelativeLayout tapa_filtrar = findViewById(R.id.tapa_filtrar);
+        final ImageView barra_filtrado = findViewById(R.id.mostrar_barra_filtrado);
+        barra_filtrado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ObjectAnimator animacionX = ObjectAnimator.ofFloat(tapa_filtrar, "x", -720f);
+                animacionX.setDuration(1500);
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.play(animacionX);
+                animatorSet.start();
+            }
+        });
 
         Button agregar = findViewById(R.id.imagen_agregar);
         agregar.setOnClickListener(new View.OnClickListener() {

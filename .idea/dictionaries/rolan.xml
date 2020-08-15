@@ -19,6 +19,7 @@
       <w>edittext</w>
       <w>eleccion</w>
       <w>extencion</w>
+      <w>filtrado</w>
       <w>filtrar</w>
       <w>flecha</w>
       <w>fondo</w>
@@ -34,10 +35,14 @@
       <w>modificada</w>
       <w>nombre</w>
       <w>porque</w>
+      <w>prueva</w>
       <w>quitar</w>
       <w>retirar</w>
+      <w>tapa</w>
+      <w>tiene</w>
       <w>timepo</w>
       <w>titulo</w>
+      <w>tres</w>
     </words>
   </dictionary>
 </component>

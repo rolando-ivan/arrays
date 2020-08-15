@@ -47,7 +47,17 @@ public class CuadroMenu {
             }
         });
         final LinearLayout libre = dialogo.findViewById(R.id.libre);
-
+        libre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog dialogo3 = new Dialog(context);
+                dialogo3.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialogo3.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialogo3.setCancelable(true);
+                dialogo3.setContentView(R.layout.dialogo);
+                dialogo3.show();
+            }
+        });
 
         final RelativeLayout menudespegable = dialogo.findViewById(R.id.menu_desplegable);
         Animation animacion = AnimationUtils.loadAnimation(context, R.anim.animacion_menu);
